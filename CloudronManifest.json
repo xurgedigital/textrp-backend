@@ -1,0 +1,14 @@
+{
+  "title": " XLRP Backend",
+  "version": "0.1.0",
+  "healthCheckPath": "/",
+  "httpPort": 8080,
+  "addons": {
+    "localstorage": {},
+    "sendmail": {},
+    "postgresql": {},
+    "redis": {}
+  },
+  "manifestVersion": 2,
+  "icon": ""
+}
