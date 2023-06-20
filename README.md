@@ -9,7 +9,7 @@ The control layer is responsible for managing user accounts, messaging credit ba
 
 ## Technical Design
 
-TextRP instantiates a Synapse homeserver (https://github.com/matrix-org/synapse/) modified to interface with this XRPL-enabled control layer to enable the following features:
+TextRP instantiates a Synapse homeserver (https://github.com/xurgedigital/textrp-synapse) modified to interface with this XRPL-enabled control layer to enable the following features:
 
 - Custom channels and themes based on NFT holdings: Users can customize their chat interface by holding specific NFTs. For example, holding a Slack and Twitter NFTs can enable those channels in the UI. This gives users complete control of their experience.
 
