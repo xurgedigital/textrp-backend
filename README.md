@@ -2,7 +2,7 @@
 
 This repository contains the Control Layer for TextRP's modified Synapse server that allows for integration with the XRP Ledger (XRPL) to enable features and channels depending on NFT holdings of the users, and payment processing for messaging credit bundles in XRP and other XRPL tokens.
 
-The control layer is responsible for managing user accounts, messaging credit balances, and NFT holdings. It interfaces with the XRPL interface to process payments and detect NFT holdings.
+The control layer is responsible for managing user accounts, messaging credit balances, and NFT holdings. It interfaces with the XRPL and the chat client to process payments and detect NFT holdings.
 
 **Basic System Diagram**
 ![system_diagram](https://iili.io/HhoOcVs.md.png)
