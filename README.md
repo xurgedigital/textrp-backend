@@ -2,12 +2,14 @@
 
 This repository contains the Control Layer for TextRP's modified Synapse server that allows for integration with the XRP Ledger (XRPL) to enable features and channels depending on NFT holdings of the users, and payment processing for messaging credit bundles in XRP and other XRPL tokens.
 
-## Technical Design
-
-The modified Synapse server includes a control layer that interfaces with the XRPL to enable the following features:
+The control layer is responsible for managing user accounts, messaging credit balances, and NFT holdings. It interfaces with the XRPL interface to process payments and detect NFT holdings.
 
 **Basic System Diagram**
 ![system_diagram](https://iili.io/HhoOcVs.md.png)
+
+## Technical Design
+
+TextRP instantiates a Synapse homeserver (https://github.com/matrix-org/synapse/) modified to interface with this control layer that interfaces with the XRPL to enable the following features:
 
 - Custom channels and themes based on NFT holdings: Users can customize their chat interface by holding specific NFTs. For example, holding a Slack and Twitter NFTs can enable those channels in the UI. This gives users complete control of their experience.
 
@@ -19,8 +21,6 @@ The modified Synapse server includes a control layer that interfaces with the XR
 The Synapse server is modified to include the following components:
 
 - XRPL Interface: The XRPL interface is responsible for interfacing with the XRPL to enable payment processing and NFT detection.
-
-- Control Layer: The control layer is responsible for managing user accounts, messaging credit balances, and NFT holdings. It interfaces with the XRPL interface to process payments and detect NFT holdings.
 
 - When a user sends a message to an XRP address, the system first checks if the address belongs to an active user, and routes the message to the user if found. If the XRP address has no account, the system stores the message, sends microtransaction via XRPL with Message Notification in memo field (and whether the sender is kyc-verified via XUMM). When receiver logs in the system onboards the account seamlessly and the receiver can read/respond to the message, where now the conversation is in-app (free) and off the XRPL to prevent needlessly burdening the XRPL.
 
