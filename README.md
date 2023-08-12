@@ -1,3 +1,5 @@
+Server admin panel: https://github.com/xurgedigital/textrp-synapse-admin
+
 # TextRP Unified Messaging - XRPL Control Layer
 
 This repository contains the Control Layer for TextRP's modified Synapse server that allows for integration with the XRP Ledger (XRPL) to enable features and channels depending on NFT holdings of the users, and payment processing for messaging credit bundles in XRP and other XRPL tokens.
